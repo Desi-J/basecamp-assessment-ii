@@ -6,7 +6,11 @@
  */
 
 // CODE HERE
-
+var me = {
+  firstname:'Desiree',
+  age:25,
+  state:'Arizona'
+}
 /**
  * #2
  *
@@ -15,7 +19,7 @@
  */
 
 // CODE HERE
-
+me.faveColor = 'Blue';
 /**
  * #3
  *
@@ -30,6 +34,7 @@ var message = {
 };
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+message['text'] = 'Blueberry'
 
 /**
  * #4
@@ -40,7 +45,15 @@ var message = {
  */
 
 // CODE HERE
+var adjustCount = {
+  upVote:function upVote(num){
+    return num ++
+  },
 
+  downVote:function downVote(num){
+    return num += -1
+  }
+}
 /**
  * #5
  *
@@ -48,7 +61,7 @@ var message = {
  */
 
 // CODE HERE
-
+var myFriends = ['Luis', 'Liz','Traci', 'Gabe'];
 /**
  * #6
  *
@@ -56,6 +69,7 @@ var message = {
  */
 
 // CODE HERE
+myFriends[4] = 'Joey'
 
 /**
  * #7
@@ -63,11 +77,11 @@ var message = {
  * Create a 'myArrayCopy' variable. It should equal the 'myArray' variable.
  * Use a built-in JavaScript method to create a copy.
  */
-
 // DON'T TOUCH THE CODE BELOW
 var myArray = [1, 2, 3, 4];
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+ var myArrayCopy = myArray.slice()
 
 /**
  * #8
@@ -81,8 +95,8 @@ var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
   // CODE HERE
-}
-
+  return ( num %2 == 0)
+};
 /**
  * #9
  *
@@ -100,6 +114,9 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
+peopleIknow.filter(function(element) {
+  return (element.friend == true)
+})
 /**
  * #10
  *
@@ -110,3 +127,8 @@ var peopleIknow = [
  */
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+
+function indexFinder(val,i,arr){
+  return i;
+}
+ randomNumbers.forEach(indexFinder)
