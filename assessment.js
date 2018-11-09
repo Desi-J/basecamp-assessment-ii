@@ -47,7 +47,8 @@ message['text'] = 'Blueberry'
 // CODE HERE
 var adjustCount = {
   upVote:function upVote(num){
-    return num ++
+    num ++
+    return num
   },
 
   downVote:function downVote(num){
@@ -93,10 +94,18 @@ var myArray = [1, 2, 3, 4];
 //DON'T TOUCH THE CODE BELOW
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
+
 function evensOnly() {
-  // CODE HERE
-  return ( num %2 == 0)
+  var array =[]
+  for(let i=0;i< myNumbers.length;i++){
+     if( myNumbers[i] %2 == 0){
+     array.push(myNumbers[i])
+    }
+
+  }
+  return array
 };
+
 /**
  * #9
  *
@@ -114,9 +123,10 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
-peopleIknow.filter(function(element) {
+var trueFriends = peopleIknow.filter(function(element) {
   return (element.friend == true)
 })
+
 /**
  * #10
  *
@@ -128,7 +138,12 @@ peopleIknow.filter(function(element) {
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
 
-function indexFinder(val,i,arr){
-  return i;
+var indexes=[]
+var indexFinder =(arr)=>{
+  for(let i = 0;i<arr.length;i++){
+    indexes.push(arr[i]= i)
+  }
+
+  return indexes
 }
- randomNumbers.forEach(indexFinder)
+indexFinder(randomNumbers)
